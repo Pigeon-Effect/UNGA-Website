@@ -111,6 +111,9 @@ function initializeWorldMap(data) {
       var countryFlag = document.querySelector(".selected-country-info .country-flag");
       countryFlag.src = `static/country_flags/${twoLetterCode.toLowerCase()}.svg`;
       countryFlag.alt = `Flag of ${selectedCountryName}`;
+      console.log(twoLetterCode)
+      console.log(twoLetterCode.toLowerCase())
+      console.log(countryFlag.src)
     } else {
       console.error("Country code not found in geoData:", selectedCountryCode);
     }
