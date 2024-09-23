@@ -109,7 +109,7 @@ function initializeWorldMap(data) {
     if (countryFeature) {
       var twoLetterCode = countryFeature.properties.A2;
       var countryFlag = document.querySelector(".selected-country-info .country-flag");
-      countryFlag.src = `/static/country_flags/${twoLetterCode}.svg`;
+      countryFlag.src = `static/country_flags/${twoLetterCode}.svg`;
       countryFlag.alt = `Flag of ${selectedCountryName}`;
     } else {
       console.error("Country code not found in geoData:", selectedCountryCode);
@@ -133,7 +133,7 @@ function initializeWorldMap(data) {
       if (countryFeature) {
         var countryName = countryFeature.properties.country_name;
         var twoLetterCode = countryFeature.properties.A2;
-        tableHtml += `<tr><td><img src="/static/country_flags/${twoLetterCode}.svg" alt="Flag of ${countryName}" style="width: 20px; height: 20px; margin-right: 5px;">${countryName}</td><td class="coincidence-number">${weightMap[countryCode].toFixed(5)}</td></tr>`;
+        tableHtml += `<tr><td><img src="static/country_flags/${twoLetterCode}.svg" alt="Flag of ${countryName}" style="width: 20px; height: 20px; margin-right: 5px;">${countryName}</td><td class="coincidence-number">${weightMap[countryCode].toFixed(5)}</td></tr>`;
       } else {
         console.error("Country code not found in geoData:", countryCode);
       }
@@ -146,7 +146,7 @@ function initializeWorldMap(data) {
       if (countryFeature) {
         var countryName = countryFeature.properties.country_name;
         var twoLetterCode = countryFeature.properties.A2;
-        tableHtml += `<tr><td><img src="/static/country_flags/${twoLetterCode}.svg" alt="Flag of ${countryName}" style="width: 20px; height: 20px; margin-right: 5px;">${countryName}</td><td class="coincidence-number">${weightMap[countryCode].toFixed(5)}</td></tr>`;
+        tableHtml += `<tr><td><img src="static/country_flags/${twoLetterCode}.svg" alt="Flag of ${countryName}" style="width: 20px; height: 20px; margin-right: 5px;">${countryName}</td><td class="coincidence-number">${weightMap[countryCode].toFixed(5)}</td></tr>`;
       } else {
         console.error("Country code not found in geoData:", countryCode);
       }
@@ -244,7 +244,7 @@ function initializeWorldMap(data) {
 
   Promise.all([
     data,
-    d3.json("/static/world_with_country_names.geojson")
+    d3.json("static/world_with_country_names.geojson")
   ]).then(function ([csvData, geoData]) {
 
     var colorScale = d3.scaleSequential(d3.interpolateViridis)
@@ -313,7 +313,7 @@ function initializeWorldMap(data) {
 
         tooltipWorldMap.html(`
           <div style="display: flex; align-items: center;">
-            <img src="/static/country_flags/${hoveredCountry.properties.A2}.svg" 
+            <img src="static/country_flags/${hoveredCountry.properties.A2}.svg" 
                  alt="Flag of ${hoveredCountry.properties.country_name}" 
                  style="border: 1px solid black; border-radius: 50%; width: 40px; height: 40px; margin-right: 10px;"/>
             <div>
@@ -372,7 +372,7 @@ var countryPaths = svg.append("g")
       // Format the tooltip content
       var tooltipContent = `
         <div style="display: flex; align-items: center;">
-          <img src="/static/country_flags/${iso2Code}.svg" 
+          <img src="static/country_flags/${iso2Code}.svg" 
                alt="Flag of ${countryName}" 
                style="border: 1px solid black; border-radius: 50%; width: 40px; height: 40px; margin-right: 10px;"/>
           <div>
