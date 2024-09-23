@@ -63,8 +63,8 @@ function createCoincidenceTableWithDots(data) {
                     displaySpearman(selectedCountryISO, selectedAttribute);
 
                     // Update flag source
-                    const iso2Code = correlationMatrixData.find(d => d['ISO 3'] === selectedCountryISO)['ISO 2'].toLowerCase();
-                    countryFlag.src = `/static/country_flags/${iso2Code}.svg`;
+                    const iso2Code = correlationMatrixData.find(d => d['ISO 3'] === selectedCountryISO)['ISO 2'];
+                    countryFlag.src = `/static/country_flags/${iso2Code.toLowerCase()}.svg`;
                     countryFlag.alt = `Flag of ${countryName}`;
 
                 });
@@ -293,7 +293,7 @@ function showTooltip(d) {
     // Format the tooltip content
     var tooltipContent = `
         <div style="display: flex; align-items: center;">
-            <img src="/static/country_flags/${iso2Code}.svg" 
+            <img src="/static/country_flags/${iso2Code.toLowerCase()}.svg" 
                  alt="Flag of ${countryName}" 
                  style="border: 1px solid black; border-radius: 50%; width: 40px; height: 40px; margin-right: 10px;"/>
             <div>
