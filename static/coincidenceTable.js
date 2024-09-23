@@ -63,7 +63,7 @@ function createCoincidenceTableWithDots(data) {
                     displaySpearman(selectedCountryISO, selectedAttribute);
 
                     // Update flag source
-                    const iso2Code = correlationMatrixData.find(d => d['ISO 3'] === selectedCountryISO)['ISO 2'];
+                    const iso2Code = correlationMatrixData.find(d => d['ISO 3'] === selectedCountryISO)['ISO 2'].toLowerCase();
                     countryFlag.src = `/static/country_flags/${iso2Code}.svg`;
                     countryFlag.alt = `Flag of ${countryName}`;
 
