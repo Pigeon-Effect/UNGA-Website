@@ -109,7 +109,7 @@ function initializeWorldMap(data) {
     if (countryFeature) {
       var twoLetterCode = countryFeature.properties.A2;
       var countryFlag = document.querySelector(".selected-country-info .country-flag");
-      countryFlag.src = `static/country_flags/${twoLetterCode}.svg`;
+      countryFlag.src = `static/country_flags/${twoLetterCode.toLowerCase()}.svg`;
       countryFlag.alt = `Flag of ${selectedCountryName}`;
     } else {
       console.error("Country code not found in geoData:", selectedCountryCode);
@@ -145,8 +145,8 @@ function initializeWorldMap(data) {
       var countryFeature = geoData.features.find(feature => feature.properties.A3 === countryCode);
       if (countryFeature) {
         var countryName = countryFeature.properties.country_name;
-        var twoLetterCode = countryFeature.properties.A2.toLowerCase();
-        tableHtml += `<tr><td><img src="static/country_flags/${twoLetterCode}.svg" alt="Flag of ${countryName}" style="width: 20px; height: 20px; margin-right: 5px;">${countryName}</td><td class="coincidence-number">${weightMap[countryCode].toFixed(5)}</td></tr>`;
+        var twoLetterCode = countryFeature.properties.A2;
+        tableHtml += `<tr><td><img src="static/country_flags/${twoLetterCode.toLowerCase()}.svg" alt="Flag of ${countryName}" style="width: 20px; height: 20px; margin-right: 5px;">${countryName}</td><td class="coincidence-number">${weightMap[countryCode].toFixed(5)}</td></tr>`;
       } else {
         console.error("Country code not found in geoData:", countryCode);
       }
