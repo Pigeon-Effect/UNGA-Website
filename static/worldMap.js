@@ -132,8 +132,8 @@ function initializeWorldMap(data) {
       var countryFeature = geoData.features.find(feature => feature.properties.A3 === countryCode);
       if (countryFeature) {
         var countryName = countryFeature.properties.country_name;
-        var twoLetterCode = countryFeature.properties.A2.toLowerCase();
-        tableHtml += `<tr><td><img src="static/country_flags/${twoLetterCode}.svg" alt="Flag of ${countryName}" style="width: 20px; height: 20px; margin-right: 5px;">${countryName}</td><td class="coincidence-number">${weightMap[countryCode].toFixed(5)}</td></tr>`;
+        var twoLetterCode = countryFeature.properties.A2;
+        tableHtml += `<tr><td><img src="static/country_flags/${twoLetterCode.toLowerCase()}.svg" alt="Flag of ${countryName}" style="width: 20px; height: 20px; margin-right: 5px;">${countryName}</td><td class="coincidence-number">${weightMap[countryCode].toFixed(5)}</td></tr>`;
       } else {
         console.error("Country code not found in geoData:", countryCode);
       }
