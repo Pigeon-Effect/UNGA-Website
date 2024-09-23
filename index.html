@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>UNGA Voting Viewer</title>
-  <link rel="stylesheet" href="UNGA-Website/static/style.css">
-  <script src="UNGA-Website/static/d3.v5.min.js"></script>
-  <script src="UNGA-Website/static/d3-scale-chromatic.v1.min.js"></script>
-  <script src="UNGA-Website/static/d3-geo-projection.v2.min.js"></script>
-  <script src="UNGA-Website/static/showSection.js" defer></script>
+  <link rel="stylesheet" href="static/style.css">
+  <script src="static/d3.v5.min.js"></script>
+  <script src="static/d3-scale-chromatic.v1.min.js"></script>
+  <script src="static/d3-geo-projection.v2.min.js"></script>
+  <script src="static/showSection.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.5.0/math.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/simple-statistics@7.8.4/dist/simple-statistics.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-statistics/7.7.0/simple-statistics.min.js"></script>
@@ -52,7 +52,7 @@
   </div>
 
   <!-- Include the landingPage.js script here -->
-  <script src="UNGA-Website/static/landingPage.js" defer></script>
+  <script src="static/landingPage.js" defer></script>
 </div>
 
 
@@ -66,7 +66,7 @@
 
 <!-- Back to Landing Page Button (initially hidden) -->
 <button id="backToLandingPageBtn" onclick="showLandingPage()" style="display: none;">
-  <img src="UNGA-Website/static/buttonSVGs/WhiteGearSVG.svg" alt="Settings">
+  <img src="static/buttonSVGs/WhiteGearSVG.svg" alt="Settings">
 </button>
 
 <!-- World Map section -->
@@ -109,13 +109,13 @@
   <button id="collapseFormalAllianceButton" class="toggle-table-button" onclick="toggleFormalAllianceTable()">-</button>
   </div>
   <button id="expandAlliesAndAdverseriesButton" class="toggle-table-button" onclick="toggleAlliesAndAdverseriesTable()">
-    <img src="UNGA-Website/static/buttonSVGs/thumbsUpAndDownSVG.svg" alt="Expand Table" class="button-icon">
+    <img src="static/buttonSVGs/thumbsUpAndDownSVG.svg" alt="Expand Table" class="button-icon">
   </button>  <svg></svg>
   <button id="expandFormalAllianceButton" class="toggle-formal-alliance-button" onclick="toggleFormalAllianceTable()">
-  <img src="UNGA-Website/static/buttonSVGs/ContractSVG.svg" alt="Expand Formal Alliance Table" class="button-icon">
+  <img src="static/buttonSVGs/ContractSVG.svg" alt="Expand Formal Alliance Table" class="button-icon">
   </button>
   <div id="tooltipWorldMap" class="tooltipWorldMap"></div>
-  <script src="UNGA-Website/static/worldMap.js" defer></script>
+  <script src="static/worldMap.js" defer></script>
 </div>
 
 
@@ -126,7 +126,7 @@
     <input type="text" id="countrySearch" placeholder="   Select a country..." style="padding: 5px; font-size: 14px; width: 200px;">
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-statistics/7.7.0/simple-statistics.min.js"></script>
-  <script src="UNGA-Website/static/coincidenceTable.js" defer></script>
+  <script src="static/coincidenceTable.js" defer></script>
 </div>
 
 <!-- Network Graph section -->
@@ -143,7 +143,7 @@
     </div>
     <!-- space for more user input for params -->
   </div>
-  <script src="UNGA-Website/static/networkGraph.js" defer></script>
+  <script src="static/networkGraph.js" defer></script>
 </div>
 
 
