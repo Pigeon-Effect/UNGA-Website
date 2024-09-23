@@ -4,7 +4,7 @@ let selectedAttribute = 'Freedom House Index';
 function createCoincidenceTableWithDots(data) {
     Promise.all([
         data,
-        d3.csv("static/nextTry12_20.csv")
+        d3.csv("static/correlates_of_coincidence.csv")
     ]).then(data => {
         const edgeListData = data[0];
         const correlationMatrixData = data[1];
