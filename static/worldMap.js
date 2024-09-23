@@ -111,9 +111,6 @@ function initializeWorldMap(data) {
       var countryFlag = document.querySelector(".selected-country-info .country-flag");
       countryFlag.src = `static/country_flags/${twoLetterCode.toLowerCase()}.svg`;
       countryFlag.alt = `Flag of ${selectedCountryName}`;
-      console.log(twoLetterCode)
-      console.log(twoLetterCode.toLowerCase())
-      console.log(countryFlag.src)
     } else {
       console.error("Country code not found in geoData:", selectedCountryCode);
     }
@@ -316,7 +313,7 @@ function initializeWorldMap(data) {
 
         tooltipWorldMap.html(`
           <div style="display: flex; align-items: center;">
-            <img src="static/country_flags/${hoveredCountry.properties.A2}.svg" 
+            <img src="static/country_flags/${hoveredCountry.properties.A2.toLowerCase()}.svg" 
                  alt="Flag of ${hoveredCountry.properties.country_name}" 
                  style="border: 1px solid black; border-radius: 50%; width: 40px; height: 40px; margin-right: 10px;"/>
             <div>
