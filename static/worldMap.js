@@ -372,7 +372,7 @@ var countryPaths = svg.append("g")
       // Format the tooltip content
       var tooltipContent = `
         <div style="display: flex; align-items: center;">
-          <img src="static/country_flags/${iso2Code}.svg" 
+          <img src="static/country_flags/${iso2Code.toLowerCase()}.svg" 
                alt="Flag of ${countryName}" 
                style="border: 1px solid black; border-radius: 50%; width: 40px; height: 40px; margin-right: 10px;"/>
           <div>
