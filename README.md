@@ -15,3 +15,8 @@ Votes without representation of a state (8) or without UN-Membership in the time
 
 The Edgelist is passed to the Visualization Tool which consists of three parts:
 
+World Map: The world map can display the relationship between a selected state and all other states. Users can click on any state to update the map accordingly. To make it easier to find extreme values, there is a table with the 10 highest and lowest edge weights. There is also a table showing the internal coincidence within selected international organizations.
+
+Coincidence Table: Here the edge weights are arranged in ascending order and tested for correlation with so-cio-economic factors. The R^2 and Spearman's rank correlation are calculated for this purpose. The latter measures the monotonic relationship of the ranks in-stead of the values themselves and is therefore particu-larly suitable for metrics with large ranges of values.
+
+Network Graph: Here all states and their connections can be simulated simultaneously. For performance reasons and to spread out an otherwise quite dense graph, a slider is provided with which the user can de-fine which edge weight must be exceeded to simulate the edges. The traction of edges is proportional to the coincidence. The nodes don’t have weights, because there is no reasonable explanation for centrality measures in this context.
